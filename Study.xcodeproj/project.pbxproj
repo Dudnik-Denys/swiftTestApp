@@ -36,7 +36,6 @@
 		F385165F2DE4C89600B577ED /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F385165E2DE4C88900B577ED /* EmptyResponse.swift */; };
 		F38516632DE51AD700B577ED /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38516622DE51AD400B577ED /* Steps.swift */; };
 		F385166A2DE5236B00B577ED /* RunTests.sh in Resources */ = {isa = PBXBuildFile; fileRef = F38516692DE5235A00B577ED /* RunTests.sh */; };
-		F3C5CF602DEF251600BDA128 /* jenkins.groovy in Resources */ = {isa = PBXBuildFile; fileRef = F3C5CF5F2DEF250B00BDA128 /* jenkins.groovy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +89,6 @@
 		F385165E2DE4C88900B577ED /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		F38516622DE51AD400B577ED /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 		F38516692DE5235A00B577ED /* RunTests.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RunTests.sh; sourceTree = "<group>"; };
-		F3C5CF5F2DEF250B00BDA128 /* jenkins.groovy */ = {isa = PBXFileReference; lastKnownFileType = text; path = jenkins.groovy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -173,7 +171,6 @@
 		F30146992DA583F0007584DB /* Study */ = {
 			isa = PBXGroup;
 			children = (
-				F3C5CF5F2DEF250B00BDA128 /* jenkins.groovy */,
 				F30146A02DA5841E007584DB /* App */,
 				F30146A12DA58427007584DB /* Configuration */,
 				F301469F2DA58414007584DB /* Resources */,
@@ -434,7 +431,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C5CF602DEF251600BDA128 /* jenkins.groovy in Resources */,
 				F301469A2DA583F0007584DB /* Preview Assets.xcassets in Resources */,
 				F30146AB2DB28DB1007584DB /* MontserratAlternates-Regular.ttf in Resources */,
 				F301469B2DA583F0007584DB /* Assets.xcassets in Resources */,

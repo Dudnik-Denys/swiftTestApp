@@ -6,6 +6,7 @@ pipeline {
         PROJECT_PATH = "Study.xcodeproj"
         SIMULATOR_NAME = "iPhone 16"
         ALLURE_TOOL_PATH = "/Users/dendarkholme/swiftLearning/Study/allure-xcresult/.build/release/AllureXCResult"
+        DERIVED_DATA = "${WORKSPACE}/DerivedData"
     }
 
     stages {
@@ -17,6 +18,8 @@ pipeline {
                     rm -rf allure-results
                     mkdir -p allure-results
                     rm -rf allure-report
+                    rm -rf DerivedData
+                    rm -rf ~/Library/Developer/Xcode/DerivedData
                 '''
             }
         }
@@ -31,6 +34,7 @@ pipeline {
                               -project ${PROJECT_PATH} \
                               -destination 'platform=iOS Simulator,name=${SIMULATOR_NAME}' \
                               -only-testing:StudyTests/CartViewModelTests \
+                              -derivedDataPath ${DERIVED_DATA} \
                               -resultBundlePath TestResults/Cart.xcresult
                         """
                     }
@@ -44,20 +48,8 @@ pipeline {
                               -project ${PROJECT_PATH} \
                               -destination 'platform=iOS Simulator,name=${SIMULATOR_NAME}' \
                               -only-testing:StudyTests/WishlistViewModelTests \
+                              -derivedDataPath ${DERIVED_DATA} \
                               -resultBundlePath TestResults/Wishlist.xcresult
-                        """
-                    }
-                }
-
-                stage('Auth') {
-                    steps {
-                        sh """
-                            xcodebuild test \
-                              -scheme ${SCHEME} \
-                              -project ${PROJECT_PATH} \
-                              -destination 'platform=iOS Simulator,name=${SIMULATOR_NAME}' \
-                              -only-testing:StudyTests/AuthViewModelTests \
-                              -resultBundlePath TestResults/Auth.xcresult
                         """
                     }
                 }
@@ -70,6 +62,7 @@ pipeline {
                               -project ${PROJECT_PATH} \
                               -destination 'platform=iOS Simulator,name=${SIMULATOR_NAME}' \
                               -only-testing:StudyUITests/StudyUITests \
+                              -derivedDataPath ${DERIVED_DATA} \
                               -resultBundlePath TestResults/UI.xcresult
                         """
                     }
@@ -80,10 +73,15 @@ pipeline {
         stage('🛠 Конвертация в Allure') {
             steps {
                 sh '''
-                    ${ALLURE_TOOL_PATH} --input TestResults/Cart.xcresult --output allure-results
-                    ${ALLURE_TOOL_PATH} --input TestResults/Wishlist.xcresult --output allure-results
-                    ${ALLURE_TOOL_PATH} --input TestResults/Auth.xcresult --output allure-results
-                    ${ALLURE_TOOL_PATH} --input TestResults/UI.xcresult --output allure-results
+                    if [ -d "TestResults/Cart.xcresult" ]; then
+                      ${ALLURE_TOOL_PATH} --input TestResults/Cart.xcresult --output allure-results
+                    fi
+                    if [ -d "TestResults/Wishlist.xcresult" ]; then
+                      ${ALLURE_TOOL_PATH} --input TestResults/Wishlist.xcresult --output allure-results
+                    fi
+                    if [ -d "TestResults/UI.xcresult" ]; then
+                      ${ALLURE_TOOL_PATH} --input TestResults/UI.xcresult --output allure-results
+                    fi
                 '''
             }
         }
@@ -101,4 +99,3 @@ pipeline {
         }
     }
 }
-

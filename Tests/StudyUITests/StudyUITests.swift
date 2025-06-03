@@ -1,10 +1,3 @@
-//
-//  StudyUITests.swift
-//  StudyUITests
-//
-//  Created by Денис Дудник on 08.04.2025.
-//
-
 import XCTest
 
 final class StudyUITests: XCTestCase {
@@ -39,5 +32,31 @@ final class StudyUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+    
+    @MainActor
+    func testLoginSuccess() {
+        let app = XCUIApplication()
+        app.launch()
+
+        let emailField = app.textFields["emailField"]
+        let passwordField = app.secureTextFields["passwordField"]
+        let loginButton = app.buttons["loginButton"]
+
+        // Проверка на существование полей
+        XCTAssertTrue(emailField.waitForExistence(timeout: 2))
+        XCTAssertTrue(passwordField.exists)
+
+        emailField.tap()
+        emailField.typeText("test@example.com")
+
+        passwordField.tap()
+        passwordField.typeText("123456")
+
+        loginButton.tap()
+
+        // Ожидаем появления элемента на главном экране
+        let profileText = app.staticTexts["Профиль"]
+        XCTAssertTrue(profileText.waitForExistence(timeout: 5))
     }
 }

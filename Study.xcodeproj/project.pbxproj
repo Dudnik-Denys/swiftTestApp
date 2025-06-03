@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		F301469A2DA583F0007584DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F30146932DA583F0007584DB /* Preview Assets.xcassets */; };
 		F301469B2DA583F0007584DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F30146952DA583F0007584DB /* Assets.xcassets */; };
-		F301469D2DA583F0007584DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30146962DA583F0007584DB /* ContentView.swift */; };
-		F301469E2DA583F0007584DB /* StudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30146982DA583F0007584DB /* StudyApp.swift */; };
 		F30146AB2DB28DB1007584DB /* MontserratAlternates-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F30146AA2DB28DB1007584DB /* MontserratAlternates-Regular.ttf */; };
-		F38516172DBE846800B577ED /* customShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38516162DBE845C00B577ED /* customShapes.swift */; };
 		F38516242DD0B8E700B577ED /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38516232DD0B8E300B577ED /* RootView.swift */; };
 		F38516262DD0B94E00B577ED /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38516252DD0B94A00B577ED /* LoginView.swift */; };
 		F38516292DD0B9BA00B577ED /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38516282DD0B9B700B577ED /* RegisterView.swift */; };
@@ -34,6 +31,12 @@
 		F385164B2DD3853A00B577ED /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F385164A2DD3853300B577ED /* CatalogViewModel.swift */; };
 		F385164D2DD394D200B577ED /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F385164C2DD394CB00B577ED /* CartViewModel.swift */; };
 		F385164F2DD399D700B577ED /* WishlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F385164E2DD399C800B577ED /* WishlistViewModel.swift */; };
+		F385165A2DE4C1DF00B577ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38516592DE4C1D700B577ED /* NetworkService.swift */; };
+		F385165D2DE4C23300B577ED /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F385165C2DE4C22B00B577ED /* MockNetworkManager.swift */; };
+		F385165F2DE4C89600B577ED /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F385165E2DE4C88900B577ED /* EmptyResponse.swift */; };
+		F38516632DE51AD700B577ED /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38516622DE51AD400B577ED /* Steps.swift */; };
+		F385166A2DE5236B00B577ED /* RunTests.sh in Resources */ = {isa = PBXBuildFile; fileRef = F38516692DE5235A00B577ED /* RunTests.sh */; };
+		F3C5CF602DEF251600BDA128 /* jenkins.groovy in Resources */ = {isa = PBXBuildFile; fileRef = F3C5CF5F2DEF250B00BDA128 /* jenkins.groovy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +62,8 @@
 		F30146682DA5315D007584DB /* StudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F30146932DA583F0007584DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F30146952DA583F0007584DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F30146962DA583F0007584DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F30146972DA583F0007584DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F30146982DA583F0007584DB /* StudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyApp.swift; sourceTree = "<group>"; };
 		F30146AA2DB28DB1007584DB /* MontserratAlternates-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Regular.ttf"; sourceTree = "<group>"; };
-		F38516162DBE845C00B577ED /* customShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customShapes.swift; sourceTree = "<group>"; };
 		F38516232DD0B8E300B577ED /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		F38516252DD0B94A00B577ED /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F38516282DD0B9B700B577ED /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -85,6 +85,12 @@
 		F385164A2DD3853300B577ED /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
 		F385164C2DD394CB00B577ED /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		F385164E2DD399C800B577ED /* WishlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewModel.swift; sourceTree = "<group>"; };
+		F38516592DE4C1D700B577ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F385165C2DE4C22B00B577ED /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		F385165E2DE4C88900B577ED /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		F38516622DE51AD400B577ED /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		F38516692DE5235A00B577ED /* RunTests.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RunTests.sh; sourceTree = "<group>"; };
+		F3C5CF5F2DEF250B00BDA128 /* jenkins.groovy */ = {isa = PBXFileReference; lastKnownFileType = text; path = jenkins.groovy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -147,6 +153,9 @@
 		F30146922DA583B1007584DB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F38516662DE5234100B577ED /* Utils */,
+				F38516612DE51AA200B577ED /* Helpers */,
+				F385165B2DE4C22200B577ED /* Mocks */,
 				F30146612DA5315D007584DB /* StudyTests */,
 				F301466B2DA5315D007584DB /* StudyUITests */,
 			);
@@ -164,6 +173,7 @@
 		F30146992DA583F0007584DB /* Study */ = {
 			isa = PBXGroup;
 			children = (
+				F3C5CF5F2DEF250B00BDA128 /* jenkins.groovy */,
 				F30146A02DA5841E007584DB /* App */,
 				F30146A12DA58427007584DB /* Configuration */,
 				F301469F2DA58414007584DB /* Resources */,
@@ -189,7 +199,6 @@
 				F38516212DD0B8A600B577ED /* ViewModels */,
 				F38516222DD0B8B000B577ED /* Utils */,
 				F38516432DD37F5000B577ED /* Network */,
-				F385161E2DD0B83D00B577ED /* old */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -208,16 +217,6 @@
 				F30146AA2DB28DB1007584DB /* MontserratAlternates-Regular.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		F385161E2DD0B83D00B577ED /* old */ = {
-			isa = PBXGroup;
-			children = (
-				F38516162DBE845C00B577ED /* customShapes.swift */,
-				F30146962DA583F0007584DB /* ContentView.swift */,
-				F30146982DA583F0007584DB /* StudyApp.swift */,
-			);
-			path = old;
 			sourceTree = "<group>";
 		};
 		F385161F2DD0B88700B577ED /* Views */ = {
@@ -284,12 +283,38 @@
 		F38516432DD37F5000B577ED /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F385165E2DE4C88900B577ED /* EmptyResponse.swift */,
+				F38516592DE4C1D700B577ED /* NetworkService.swift */,
 				F38516482DD37FA800B577ED /* NetworkError.swift */,
 				F38516462DD37F9700B577ED /* HTTPMethod.swift */,
 				F38516442DD37F8300B577ED /* Endpoint.swift */,
 				F385163D2DD37CF200B577ED /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F385165B2DE4C22200B577ED /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F385165C2DE4C22B00B577ED /* MockNetworkManager.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		F38516612DE51AA200B577ED /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F38516622DE51AD400B577ED /* Steps.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F38516662DE5234100B577ED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F38516692DE5235A00B577ED /* RunTests.sh */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C5CF602DEF251600BDA128 /* jenkins.groovy in Resources */,
 				F301469A2DA583F0007584DB /* Preview Assets.xcassets in Resources */,
 				F30146AB2DB28DB1007584DB /* MontserratAlternates-Regular.ttf in Resources */,
 				F301469B2DA583F0007584DB /* Assets.xcassets in Resources */,
@@ -419,6 +445,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F385166A2DE5236B00B577ED /* RunTests.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,16 +468,16 @@
 				F385163C2DD37CD600B577ED /* UserProfile.swift in Sources */,
 				F38516302DD0BAAE00B577ED /* CatalogView.swift in Sources */,
 				F38516422DD37F1300B577ED /* TokenResponse.swift in Sources */,
+				F385165A2DE4C1DF00B577ED /* NetworkService.swift in Sources */,
 				F385164F2DD399D700B577ED /* WishlistViewModel.swift in Sources */,
 				F385163E2DD37CF600B577ED /* NetworkManager.swift in Sources */,
 				F38516242DD0B8E700B577ED /* RootView.swift in Sources */,
 				F38516362DD0BB1B00B577ED /* ProfileView.swift in Sources */,
+				F385165F2DE4C89600B577ED /* EmptyResponse.swift in Sources */,
 				F38516472DD37F9A00B577ED /* HTTPMethod.swift in Sources */,
 				F385164D2DD394D200B577ED /* CartViewModel.swift in Sources */,
 				F38516402DD37D2800B577ED /* AuthViewModel.swift in Sources */,
-				F38516172DBE846800B577ED /* customShapes.swift in Sources */,
 				F385162E2DD0BA5E00B577ED /* MainTabView.swift in Sources */,
-				F301469D2DA583F0007584DB /* ContentView.swift in Sources */,
 				F385164B2DD3853A00B577ED /* CatalogViewModel.swift in Sources */,
 				F38516452DD37F8A00B577ED /* Endpoint.swift in Sources */,
 				F38516342DD0BAF700B577ED /* WishlistView.swift in Sources */,
@@ -458,7 +485,6 @@
 				F385163A2DD0BC3800B577ED /* AppState.swift in Sources */,
 				F38516292DD0B9BA00B577ED /* RegisterView.swift in Sources */,
 				F38516262DD0B94E00B577ED /* LoginView.swift in Sources */,
-				F301469E2DA583F0007584DB /* StudyApp.swift in Sources */,
 				F38516382DD0BB6A00B577ED /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +493,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F38516632DE51AD700B577ED /* Steps.swift in Sources */,
+				F385165D2DE4C23300B577ED /* MockNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

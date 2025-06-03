@@ -12,7 +12,9 @@ struct LoginView: View {
                 TextField("Email", text: $email)
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
+                    .accessibilityIdentifier("emailField")
                 SecureField("Пароль", text: $password)
+                    .accessibilityIdentifier("passwordField")
             }
 
             Button(action: {
@@ -24,6 +26,7 @@ struct LoginView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
             }
             .disabled(email.isEmpty || password.isEmpty)
+            .accessibilityIdentifier("loginButton")
         }
     }
 }

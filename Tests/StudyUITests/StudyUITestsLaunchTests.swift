@@ -1,10 +1,3 @@
-//
-//  StudyUITestsLaunchTests.swift
-//  StudyUITests
-//
-//  Created by Денис Дудник on 08.04.2025.
-//
-
 import XCTest
 
 final class StudyUITestsLaunchTests: XCTestCase {
